@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HEATSM.dbo.Account' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="RecId" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="CreatedDateTime" />
+            <PropertyRef Name="LastModBy" />
+            <PropertyRef Name="LastModDateTime" />
+            <PropertyRef Name="Frs_CompositeContract_Entity_Id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Frs_CompositeContract_Entity_RecId" />
+          </Key>
+          <Property Name="RecId" Type="char" MaxLength="32" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="datetime" Nullable="false" />
+          <Property Name="LastModBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastModDateTime" Type="datetime" Nullable="false" />
+          <Property Name="ReadOnly" Type="bit" />
+          <Property Name="VIP" Type="bit" />
+          <Property Name="Frs_CompositeContract_Entity_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="40" />
+          <Property Name="Country_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Country" Type="nvarchar" MaxLength="40" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="20" />
+          <Property Name="Phone1" Type="varchar" MaxLength="60" />
+          <Property Name="Frs_CompositeContract_Entity_RecId" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="Phone2" Type="varchar" MaxLength="60" />
+          <Property Name="ParentLink_Category" Type="varchar" MaxLength="100" />
+          <Property Name="ParentLink_RecID" Type="varchar" MaxLength="32" />
+          <Property Name="PrimaryContactLink_Category" Type="varchar" MaxLength="100" />
+          <Property Name="PrimaryContactLink_RecID" Type="varchar" MaxLength="32" />
+          <Property Name="Status_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="AccountNumber" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="FatherName" Type="varchar" MaxLength="150" />
+          <Property Name="LastName" Type="varchar" MaxLength="100" />
+          <Property Name="Mother" Type="varchar" MaxLength="32" />
+          <Property Name="CoContact" Type="varchar" MaxLength="150" />
+          <Property Name="PreferredCity" Type="varchar" MaxLength="80" />
+          <Property Name="PreferredName" Type="varchar" MaxLength="80" />
+          <Property Name="BobDirectPhone" Type="varchar" MaxLength="32" />
+          <Property Name="InceptionDate" Type="datetime" />
+          <Property Name="Phone3" Type="varchar" MaxLength="60" />
+          <Property Name="Fax" Type="varchar" MaxLength="60" />
+          <Property Name="Language_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Language" Type="varchar" MaxLength="32" />
+          <Property Name="Nationality" Type="varchar" MaxLength="32" />
+          <Property Name="PartiesNbr" Type="varchar" MaxLength="10" />
+          <Property Name="RegistryNbr" Type="varchar" MaxLength="40" />
+          <Property Name="AccountID" Type="varchar" MaxLength="20" />
+          <Property Name="Type_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Type" Type="varchar" MaxLength="32" />
+          <Property Name="Branch_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Branch" Type="varchar" MaxLength="60" />
+          <Property Name="Title" Type="varchar" MaxLength="32" />
+          <Property Name="Territory" Type="varchar" MaxLength="32" />
+          <Property Name="ResidentIn" Type="varchar" MaxLength="32" />
+          <Property Name="Sex" Type="varchar" MaxLength="32" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="MaritalStatus" Type="varchar" MaxLength="32" />
+          <Property Name="CustomerStatus" Type="varchar" MaxLength="32" />
+          <Property Name="ClosedCustomer" Type="varchar" MaxLength="32" />
+          <Property Name="TradingType" Type="varchar" MaxLength="32" />
+          <Property Name="InvPotential" Type="varchar" MaxLength="32" />
+          <Property Name="PotentialStatus" Type="varchar" MaxLength="32" />
+          <Property Name="PotentialStatusDate" Type="datetime" />
+          <Property Name="EUSRequestType" Type="varchar" MaxLength="32" />
+          <Property Name="EUSSubRequestType" Type="varchar" MaxLength="32" />
+          <Property Name="EUSEmailTo" Type="varchar" MaxLength="150" />
+          <Property Name="EUSSubject" Type="varchar" MaxLength="32" />
+          <Property Name="EUSEmailCC" Type="varchar" MaxLength="150" />
+          <Property Name="EUSSubAgentName" Type="varchar" MaxLength="80" />
+          <Property Name="EUSLandline" Type="varchar" MaxLength="32" />
+          <Property Name="EUSMobile" Type="varchar" MaxLength="32" />
+          <Property Name="EUSEmail" Type="varchar" MaxLength="150" />
+          <Property Name="EUSWUAccUSD" Type="varchar" MaxLength="32" />
+          <Property Name="EUSFullName" Type="varchar" MaxLength="150" />
+          <Property Name="EUSOperatorID" Type="varchar" MaxLength="32" />
+          <Property Name="EUSTerminal" Type="varchar" MaxLength="32" />
+          <Property Name="WUPOSOPFullName" Type="varchar" MaxLength="150" />
+          <Property Name="WUPOSOPOPID" Type="varchar" MaxLength="32" />
+          <Property Name="WUPOSOPTerminalID" Type="varchar" MaxLength="32" />
+          <Property Name="LimitNeeded" Type="varchar" MaxLength="32" />
+          <Property Name="LimitReason" Type="varchar" MaxLength="32" />
+          <Property Name="CanceledMTCN" Type="varchar" MaxLength="32" />
+          <Property Name="ReplacementMTCN" Type="varchar" MaxLength="32" />
+          <Property Name="Operator" Type="varchar" MaxLength="32" />
+          <Property Name="GMPERecID" Type="char" MaxLength="15" />
+          <Property Name="GMPEAccountNo" Type="char" MaxLength="20" />
+          <Property Name="OpeningDate" Type="datetime" />
+          <Property Name="Resident" Type="varchar" MaxLength="32" />
+          <Property Name="Occupation" Type="varchar" MaxLength="32" />
+          <Property Name="Employer" Type="varchar" MaxLength="32" />
+          <Property Name="IDNumber" Type="varchar" MaxLength="32" />
+          <Property Name="IDDescription" Type="varchar" MaxLength="32" />
+          <Property Name="WorkStatus" Type="varchar" MaxLength="32" />
+          <Property Name="Education" Type="varchar" MaxLength="32" />
+          <Property Name="Floor" Type="varchar" MaxLength="32" />
+          <Property Name="Building" Type="varchar" MaxLength="32" />
+          <Property Name="Street" Type="varchar" MaxLength="32" />
+          <Property Name="NearBy" Type="varchar" MaxLength="32" />
+          <Property Name="Locality" Type="varchar" MaxLength="32" />
+          <Property Name="CityAccount" Type="varchar" MaxLength="80" />
+          <Property Name="Province" Type="varchar" MaxLength="80" />
+          <Property Name="CountryAccount" Type="varchar" MaxLength="32" />
+          <Property Name="POBox" Type="varchar" MaxLength="32" />
+          <Property Name="TBSFlag" Type="bit" />
+          <Property Name="FoundationDat" Type="datetime" />
+          <Property Name="Activities" Type="varchar" MaxLength="32" />
+          <Property Name="LegalForm" Type="varchar" MaxLength="32" />
+          <Property Name="EconomicSector" Type="varchar" MaxLength="32" />
+          <Property Name="WUBills" Type="varchar" MaxLength="32" />
+          <Property Name="WUSuspendDate" Type="datetime" />
+          <Property Name="WULocationStatus" Type="varchar" MaxLength="32" />
+          <Property Name="WUTransactionLimit" Type="varchar" MaxLength="32" />
+          <Property Name="WUDailyLimit" Type="varchar" MaxLength="32" />
+          <Property Name="WURegion" Type="varchar" MaxLength="32" />
+          <Property Name="WUAddress" Type="varchar" MaxLength="32" />
+          <Property Name="WUContactPhone" Type="varchar" MaxLength="32" />
+          <Property Name="WUContact" Type="varchar" MaxLength="32" />
+          <Property Name="WUBusinessID" Type="varchar" MaxLength="32" />
+          <Property Name="WUAccLBP" Type="varchar" MaxLength="32" />
+          <Property Name="WUAccUSD" Type="varchar" MaxLength="32" />
+          <Property Name="WUBobAcctID" Type="varchar" MaxLength="32" />
+          <Property Name="WU" Type="varchar" MaxLength="32" />
+          <Property Name="FirstName" Type="varchar" MaxLength="80" />
+          <Property Name="WUMondayFrom_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUMondayFrom" Type="varchar" MaxLength="5" />
+          <Property Name="WUMondayTo_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUMondayTo" Type="varchar" MaxLength="5" />
+          <Property Name="WUTuesdayFrom_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUTuesdayFrom" Type="varchar" MaxLength="5" />
+          <Property Name="WUTuesdayTo_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUTuesdayTo" Type="varchar" MaxLength="5" />
+          <Property Name="WUWednesdayFrom_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUWednesdayFrom" Type="varchar" MaxLength="5" />
+          <Property Name="WUWednesdayTo_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUWednesdayTo" Type="varchar" MaxLength="5" />
+          <Property Name="WUThursdayFrom_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUThursdayFrom" Type="varchar" MaxLength="5" />
+          <Property Name="WUThursdayTo_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUThursdayTo" Type="varchar" MaxLength="5" />
+          <Property Name="WUFridayFrom_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUFridayFrom" Type="varchar" MaxLength="5" />
+          <Property Name="WUFridayTo_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUFridayTo" Type="varchar" MaxLength="5" />
+          <Property Name="WUSaturdayFrom_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUSaturdayFrom" Type="varchar" MaxLength="5" />
+          <Property Name="WUSaturdayTo_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUSaturdayTo" Type="varchar" MaxLength="5" />
+          <Property Name="OnlineSegment" Type="varchar" MaxLength="32" />
+          <Property Name="Shareholder" Type="varchar" MaxLength="32" />
+          <Property Name="BOBEmployee" Type="varchar" MaxLength="32" />
+          <Property Name="BOBVIP" Type="varchar" MaxLength="32" />
+          <Property Name="DSAFlag" Type="varchar" MaxLength="32" />
+          <Property Name="RetailSegment" Type="varchar" MaxLength="32" />
+          <Property Name="OnlineBanking" Type="varchar" MaxLength="32" />
+          <Property Name="CoporateEBanking" Type="varchar" MaxLength="32" />
+          <Property Name="CorpAgentFullName" Type="varchar" MaxLength="140" />
+          <Property Name="CorpAgentPhone1" Type="varchar" MaxLength="32" />
+          <Property Name="CorpAgentPhone2" Type="varchar" MaxLength="32" />
+          <Property Name="CorpAgent" Type="varchar(max)" />
+          <Property Name="CorpAgentFullName2" Type="varchar" MaxLength="160" />
+          <Property Name="RecordAlert_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="RecordAlert" Type="varchar" MaxLength="1800" />
+          <Property Name="HasRecordAlert" Type="bit" />
+          <Property Name="LastViewed" Type="datetime" />
+          <Property Name="RecordAlertLastAcknowledgedOn" Type="datetime" />
+          <Property Name="RecordAlertLastAcknowledgedBy" Type="varchar" MaxLength="60" />
+          <Property Name="RecordAlertAcknowledgedFlag" Type="bit" />
+          <Property Name="AccountBalanceURL" Type="varchar" MaxLength="1800" />
+          <Property Name="Ufullname" Type="varchar" MaxLength="200" />
+          <Property Name="FormationPlace" Type="varchar" MaxLength="32" />
+          <Property Name="CorporateContact" Type="varchar" MaxLength="80" />
+          <Property Name="ClientClassification" Type="varchar" MaxLength="32" />
+          <Property Name="WUSundayTo_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUSundayTo" Type="varchar" MaxLength="5" />
+          <Property Name="WUSundayFrom_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="WUSundayFrom" Type="varchar" MaxLength="5" />
+          <Property Name="StatusDate" Type="varchar" MaxLength="10" />
+          <Property Name="ClosedDate" Type="varchar" MaxLength="10" />
+          <Property Name="AccountBalanceTab" Type="nvarchar(max)" />
+          <Property Name="KBLastSearched" Type="nvarchar" MaxLength="255" />
+          <Property Name="PPNumber" Type="varchar" MaxLength="10" />
+          <Property Name="AccountIDTerritoryCode" Type="varchar" MaxLength="20" />
+          <Property Name="RMSegment" Type="varchar" MaxLength="20" />
+          <Property Name="RMUserName" Type="varchar" MaxLength="20" />
+          <Property Name="TerritoryCode" Type="varchar" MaxLength="3" />
+          <Property Name="VerbalPassword" Type="varchar" MaxLength="100" />
+          <Property Name="PhoneFormatLandline" Type="varchar" MaxLength="60" />
+          <Property Name="PhoneFormatMobile" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityContainer Name="ModelsStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Account].[RecId] AS [RecId], 
+    [Account].[CreatedBy] AS [CreatedBy], 
+    [Account].[CreatedDateTime] AS [CreatedDateTime], 
+    [Account].[LastModBy] AS [LastModBy], 
+    [Account].[LastModDateTime] AS [LastModDateTime], 
+    [Account].[ReadOnly] AS [ReadOnly], 
+    [Account].[VIP] AS [VIP], 
+    [Account].[Frs_CompositeContract_Entity_Id] AS [Frs_CompositeContract_Entity_Id], 
+    [Account].[Name] AS [Name], 
+    [Account].[Email] AS [Email], 
+    [Account].[Address] AS [Address], 
+    [Account].[City] AS [City], 
+    [Account].[State] AS [State], 
+    [Account].[Country_Valid] AS [Country_Valid], 
+    [Account].[Country] AS [Country], 
+    [Account].[Zip] AS [Zip], 
+    [Account].[Phone1] AS [Phone1], 
+    [Account].[Frs_CompositeContract_Entity_RecId] AS [Frs_CompositeContract_Entity_RecId], 
+    [Account].[Phone2] AS [Phone2], 
+    [Account].[ParentLink_Category] AS [ParentLink_Category], 
+    [Account].[ParentLink_RecID] AS [ParentLink_RecID], 
+    [Account].[PrimaryContactLink_Category] AS [PrimaryContactLink_Category], 
+    [Account].[PrimaryContactLink_RecID] AS [PrimaryContactLink_RecID], 
+    [Account].[Status_Valid] AS [Status_Valid], 
+    [Account].[Status] AS [Status], 
+    [Account].[AccountNumber] AS [AccountNumber], 
+    [Account].[FatherName] AS [FatherName], 
+    [Account].[LastName] AS [LastName], 
+    [Account].[Mother] AS [Mother], 
+    [Account].[CoContact] AS [CoContact], 
+    [Account].[PreferredCity] AS [PreferredCity], 
+    [Account].[PreferredName] AS [PreferredName], 
+    [Account].[BobDirectPhone] AS [BobDirectPhone], 
+    [Account].[InceptionDate] AS [InceptionDate], 
+    [Account].[Phone3] AS [Phone3], 
+    [Account].[Fax] AS [Fax], 
+    [Account].[Language_Valid] AS [Language_Valid], 
+    [Account].[Language] AS [Language], 
+    [Account].[Nationality] AS [Nationality], 
+    [Account].[PartiesNbr] AS [PartiesNbr], 
+    [Account].[RegistryNbr] AS [RegistryNbr], 
+    [Account].[AccountID] AS [AccountID], 
+    [Account].[Type_Valid] AS [Type_Valid], 
+    [Account].[Type] AS [Type], 
+    [Account].[Branch_Valid] AS [Branch_Valid], 
+    [Account].[Branch] AS [Branch], 
+    [Account].[Title] AS [Title], 
+    [Account].[Territory] AS [Territory], 
+    [Account].[ResidentIn] AS [ResidentIn], 
+    [Account].[Sex] AS [Sex], 
+    [Account].[BirthDate] AS [BirthDate], 
+    [Account].[MaritalStatus] AS [MaritalStatus], 
+    [Account].[CustomerStatus] AS [CustomerStatus], 
+    [Account].[ClosedCustomer] AS [ClosedCustomer], 
+    [Account].[TradingType] AS [TradingType], 
+    [Account].[InvPotential] AS [InvPotential], 
+    [Account].[PotentialStatus] AS [PotentialStatus], 
+    [Account].[PotentialStatusDate] AS [PotentialStatusDate], 
+    [Account].[EUSRequestType] AS [EUSRequestType], 
+    [Account].[EUSSubRequestType] AS [EUSSubRequestType], 
+    [Account].[EUSEmailTo] AS [EUSEmailTo], 
+    [Account].[EUSSubject] AS [EUSSubject], 
+    [Account].[EUSEmailCC] AS [EUSEmailCC], 
+    [Account].[EUSSubAgentName] AS [EUSSubAgentName], 
+    [Account].[EUSLandline] AS [EUSLandline], 
+    [Account].[EUSMobile] AS [EUSMobile], 
+    [Account].[EUSEmail] AS [EUSEmail], 
+    [Account].[EUSWUAccUSD] AS [EUSWUAccUSD], 
+    [Account].[EUSFullName] AS [EUSFullName], 
+    [Account].[EUSOperatorID] AS [EUSOperatorID], 
+    [Account].[EUSTerminal] AS [EUSTerminal], 
+    [Account].[WUPOSOPFullName] AS [WUPOSOPFullName], 
+    [Account].[WUPOSOPOPID] AS [WUPOSOPOPID], 
+    [Account].[WUPOSOPTerminalID] AS [WUPOSOPTerminalID], 
+    [Account].[LimitNeeded] AS [LimitNeeded], 
+    [Account].[LimitReason] AS [LimitReason], 
+    [Account].[CanceledMTCN] AS [CanceledMTCN], 
+    [Account].[ReplacementMTCN] AS [ReplacementMTCN], 
+    [Account].[Operator] AS [Operator], 
+    [Account].[GMPERecID] AS [GMPERecID], 
+    [Account].[GMPEAccountNo] AS [GMPEAccountNo], 
+    [Account].[OpeningDate] AS [OpeningDate], 
+    [Account].[Resident] AS [Resident], 
+    [Account].[Occupation] AS [Occupation], 
+    [Account].[Employer] AS [Employer], 
+    [Account].[IDNumber] AS [IDNumber], 
+    [Account].[IDDescription] AS [IDDescription], 
+    [Account].[WorkStatus] AS [WorkStatus], 
+    [Account].[Education] AS [Education], 
+    [Account].[Floor] AS [Floor], 
+    [Account].[Building] AS [Building], 
+    [Account].[Street] AS [Street], 
+    [Account].[NearBy] AS [NearBy], 
+    [Account].[Locality] AS [Locality], 
+    [Account].[CityAccount] AS [CityAccount], 
+    [Account].[Province] AS [Province], 
+    [Account].[CountryAccount] AS [CountryAccount], 
+    [Account].[POBox] AS [POBox], 
+    [Account].[TBSFlag] AS [TBSFlag], 
+    [Account].[FoundationDat] AS [FoundationDat], 
+    [Account].[Activities] AS [Activities], 
+    [Account].[LegalForm] AS [LegalForm], 
+    [Account].[EconomicSector] AS [EconomicSector], 
+    [Account].[WUBills] AS [WUBills], 
+    [Account].[WUSuspendDate] AS [WUSuspendDate], 
+    [Account].[WULocationStatus] AS [WULocationStatus], 
+    [Account].[WUTransactionLimit] AS [WUTransactionLimit], 
+    [Account].[WUDailyLimit] AS [WUDailyLimit], 
+    [Account].[WURegion] AS [WURegion], 
+    [Account].[WUAddress] AS [WUAddress], 
+    [Account].[WUContactPhone] AS [WUContactPhone], 
+    [Account].[WUContact] AS [WUContact], 
+    [Account].[WUBusinessID] AS [WUBusinessID], 
+    [Account].[WUAccLBP] AS [WUAccLBP], 
+    [Account].[WUAccUSD] AS [WUAccUSD], 
+    [Account].[WUBobAcctID] AS [WUBobAcctID], 
+    [Account].[WU] AS [WU], 
+    [Account].[FirstName] AS [FirstName], 
+    [Account].[WUMondayFrom_Valid] AS [WUMondayFrom_Valid], 
+    [Account].[WUMondayFrom] AS [WUMondayFrom], 
+    [Account].[WUMondayTo_Valid] AS [WUMondayTo_Valid], 
+    [Account].[WUMondayTo] AS [WUMondayTo], 
+    [Account].[WUTuesdayFrom_Valid] AS [WUTuesdayFrom_Valid], 
+    [Account].[WUTuesdayFrom] AS [WUTuesdayFrom], 
+    [Account].[WUTuesdayTo_Valid] AS [WUTuesdayTo_Valid], 
+    [Account].[WUTuesdayTo] AS [WUTuesdayTo], 
+    [Account].[WUWednesdayFrom_Valid] AS [WUWednesdayFrom_Valid], 
+    [Account].[WUWednesdayFrom] AS [WUWednesdayFrom], 
+    [Account].[WUWednesdayTo_Valid] AS [WUWednesdayTo_Valid], 
+    [Account].[WUWednesdayTo] AS [WUWednesdayTo], 
+    [Account].[WUThursdayFrom_Valid] AS [WUThursdayFrom_Valid], 
+    [Account].[WUThursdayFrom] AS [WUThursdayFrom], 
+    [Account].[WUThursdayTo_Valid] AS [WUThursdayTo_Valid], 
+    [Account].[WUThursdayTo] AS [WUThursdayTo], 
+    [Account].[WUFridayFrom_Valid] AS [WUFridayFrom_Valid], 
+    [Account].[WUFridayFrom] AS [WUFridayFrom], 
+    [Account].[WUFridayTo_Valid] AS [WUFridayTo_Valid], 
+    [Account].[WUFridayTo] AS [WUFridayTo], 
+    [Account].[WUSaturdayFrom_Valid] AS [WUSaturdayFrom_Valid], 
+    [Account].[WUSaturdayFrom] AS [WUSaturdayFrom], 
+    [Account].[WUSaturdayTo_Valid] AS [WUSaturdayTo_Valid], 
+    [Account].[WUSaturdayTo] AS [WUSaturdayTo], 
+    [Account].[OnlineSegment] AS [OnlineSegment], 
+    [Account].[Shareholder] AS [Shareholder], 
+    [Account].[BOBEmployee] AS [BOBEmployee], 
+    [Account].[BOBVIP] AS [BOBVIP], 
+    [Account].[DSAFlag] AS [DSAFlag], 
+    [Account].[RetailSegment] AS [RetailSegment], 
+    [Account].[OnlineBanking] AS [OnlineBanking], 
+    [Account].[CoporateEBanking] AS [CoporateEBanking], 
+    [Account].[CorpAgentFullName] AS [CorpAgentFullName], 
+    [Account].[CorpAgentPhone1] AS [CorpAgentPhone1], 
+    [Account].[CorpAgentPhone2] AS [CorpAgentPhone2], 
+    [Account].[CorpAgent] AS [CorpAgent], 
+    [Account].[CorpAgentFullName2] AS [CorpAgentFullName2], 
+    [Account].[RecordAlert_Valid] AS [RecordAlert_Valid], 
+    [Account].[RecordAlert] AS [RecordAlert], 
+    [Account].[HasRecordAlert] AS [HasRecordAlert], 
+    [Account].[LastViewed] AS [LastViewed], 
+    [Account].[RecordAlertLastAcknowledgedOn] AS [RecordAlertLastAcknowledgedOn], 
+    [Account].[RecordAlertLastAcknowledgedBy] AS [RecordAlertLastAcknowledgedBy], 
+    [Account].[RecordAlertAcknowledgedFlag] AS [RecordAlertAcknowledgedFlag], 
+    [Account].[AccountBalanceURL] AS [AccountBalanceURL], 
+    [Account].[Ufullname] AS [Ufullname], 
+    [Account].[FormationPlace] AS [FormationPlace], 
+    [Account].[CorporateContact] AS [CorporateContact], 
+    [Account].[ClientClassification] AS [ClientClassification], 
+    [Account].[WUSundayTo_Valid] AS [WUSundayTo_Valid], 
+    [Account].[WUSundayTo] AS [WUSundayTo], 
+    [Account].[WUSundayFrom_Valid] AS [WUSundayFrom_Valid], 
+    [Account].[WUSundayFrom] AS [WUSundayFrom], 
+    [Account].[StatusDate] AS [StatusDate], 
+    [Account].[ClosedDate] AS [ClosedDate], 
+    [Account].[AccountBalanceTab] AS [AccountBalanceTab], 
+    [Account].[KBLastSearched] AS [KBLastSearched], 
+    [Account].[PPNumber] AS [PPNumber], 
+    [Account].[AccountIDTerritoryCode] AS [AccountIDTerritoryCode], 
+    [Account].[RMSegment] AS [RMSegment], 
+    [Account].[RMUserName] AS [RMUserName], 
+    [Account].[TerritoryCode] AS [TerritoryCode], 
+    [Account].[VerbalPassword] AS [VerbalPassword], 
+    [Account].[PhoneFormatLandline] AS [PhoneFormatLandline], 
+    [Account].[PhoneFormatMobile] AS [PhoneFormatMobile]
+    FROM [dbo].[Account] AS [Account]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="RecId" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="CreatedDateTime" />
+            <PropertyRef Name="LastModBy" />
+            <PropertyRef Name="LastModDateTime" />
+            <PropertyRef Name="Frs_CompositeContract_Entity_Id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Frs_CompositeContract_Entity_RecId" />
+          </Key>
+          <Property Name="RecId" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastModBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastModDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ReadOnly" Type="Boolean" />
+          <Property Name="VIP" Type="Boolean" />
+          <Property Name="Frs_CompositeContract_Entity_Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Country_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Zip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Phone1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Frs_CompositeContract_Entity_RecId" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ParentLink_Category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ParentLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryContactLink_Category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryContactLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Status_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNumber" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="FatherName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mother" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CoContact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="PreferredCity" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="PreferredName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="BobDirectPhone" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="InceptionDate" Type="DateTime" Precision="3" />
+          <Property Name="Phone3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Language_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Language" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Nationality" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="PartiesNbr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RegistryNbr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="AccountID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Type_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Branch_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Branch" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Territory" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ResidentIn" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Sex" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="BirthDate" Type="DateTime" Precision="3" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerStatus" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ClosedCustomer" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="TradingType" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="InvPotential" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="PotentialStatus" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="PotentialStatusDate" Type="DateTime" Precision="3" />
+          <Property Name="EUSRequestType" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EUSSubRequestType" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EUSEmailTo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EUSSubject" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EUSEmailCC" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EUSSubAgentName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="EUSLandline" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EUSMobile" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EUSEmail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EUSWUAccUSD" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EUSFullName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EUSOperatorID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EUSTerminal" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUPOSOPFullName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="WUPOSOPOPID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUPOSOPTerminalID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="LimitNeeded" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="LimitReason" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CanceledMTCN" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ReplacementMTCN" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Operator" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="GMPERecID" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="GMPEAccountNo" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="OpeningDate" Type="DateTime" Precision="3" />
+          <Property Name="Resident" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Occupation" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Employer" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="IDNumber" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="IDDescription" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WorkStatus" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Education" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Floor" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Building" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Street" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="NearBy" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Locality" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CityAccount" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Province" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CountryAccount" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="POBox" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="TBSFlag" Type="Boolean" />
+          <Property Name="FoundationDat" Type="DateTime" Precision="3" />
+          <Property Name="Activities" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="LegalForm" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EconomicSector" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUBills" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUSuspendDate" Type="DateTime" Precision="3" />
+          <Property Name="WULocationStatus" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUTransactionLimit" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUDailyLimit" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WURegion" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUContactPhone" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUContact" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUBusinessID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUAccLBP" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUAccUSD" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUBobAcctID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WU" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="WUMondayFrom_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUMondayFrom" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUMondayTo_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUMondayTo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUTuesdayFrom_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUTuesdayFrom" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUTuesdayTo_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUTuesdayTo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUWednesdayFrom_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUWednesdayFrom" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUWednesdayTo_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUWednesdayTo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUThursdayFrom_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUThursdayFrom" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUThursdayTo_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUThursdayTo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUFridayFrom_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUFridayFrom" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUFridayTo_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUFridayTo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUSaturdayFrom_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUSaturdayFrom" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUSaturdayTo_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUSaturdayTo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="OnlineSegment" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Shareholder" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="BOBEmployee" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="BOBVIP" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="DSAFlag" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="RetailSegment" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="OnlineBanking" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CoporateEBanking" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CorpAgentFullName" Type="String" MaxLength="140" FixedLength="false" Unicode="false" />
+          <Property Name="CorpAgentPhone1" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CorpAgentPhone2" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CorpAgent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CorpAgentFullName2" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+          <Property Name="RecordAlert_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="RecordAlert" Type="String" MaxLength="1800" FixedLength="false" Unicode="false" />
+          <Property Name="HasRecordAlert" Type="Boolean" />
+          <Property Name="LastViewed" Type="DateTime" Precision="3" />
+          <Property Name="RecordAlertLastAcknowledgedOn" Type="DateTime" Precision="3" />
+          <Property Name="RecordAlertLastAcknowledgedBy" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="RecordAlertAcknowledgedFlag" Type="Boolean" />
+          <Property Name="AccountBalanceURL" Type="String" MaxLength="1800" FixedLength="false" Unicode="false" />
+          <Property Name="Ufullname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FormationPlace" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CorporateContact" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ClientClassification" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUSundayTo_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUSundayTo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="WUSundayFrom_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="WUSundayFrom" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="StatusDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ClosedDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AccountBalanceTab" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KBLastSearched" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PPNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AccountIDTerritoryCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RMSegment" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RMUserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TerritoryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="VerbalPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneFormatLandline" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneFormatMobile" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="HeatDBContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Account" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="HeatDBContext">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="Models.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="RecId" ColumnName="RecId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="LastModBy" ColumnName="LastModBy" />
+                <ScalarProperty Name="LastModDateTime" ColumnName="LastModDateTime" />
+                <ScalarProperty Name="ReadOnly" ColumnName="ReadOnly" />
+                <ScalarProperty Name="VIP" ColumnName="VIP" />
+                <ScalarProperty Name="Frs_CompositeContract_Entity_Id" ColumnName="Frs_CompositeContract_Entity_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country_Valid" ColumnName="Country_Valid" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Frs_CompositeContract_Entity_RecId" ColumnName="Frs_CompositeContract_Entity_RecId" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="ParentLink_Category" ColumnName="ParentLink_Category" />
+                <ScalarProperty Name="ParentLink_RecID" ColumnName="ParentLink_RecID" />
+                <ScalarProperty Name="PrimaryContactLink_Category" ColumnName="PrimaryContactLink_Category" />
+                <ScalarProperty Name="PrimaryContactLink_RecID" ColumnName="PrimaryContactLink_RecID" />
+                <ScalarProperty Name="Status_Valid" ColumnName="Status_Valid" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Mother" ColumnName="Mother" />
+                <ScalarProperty Name="CoContact" ColumnName="CoContact" />
+                <ScalarProperty Name="PreferredCity" ColumnName="PreferredCity" />
+                <ScalarProperty Name="PreferredName" ColumnName="PreferredName" />
+                <ScalarProperty Name="BobDirectPhone" ColumnName="BobDirectPhone" />
+                <ScalarProperty Name="InceptionDate" ColumnName="InceptionDate" />
+                <ScalarProperty Name="Phone3" ColumnName="Phone3" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Language_Valid" ColumnName="Language_Valid" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="PartiesNbr" ColumnName="PartiesNbr" />
+                <ScalarProperty Name="RegistryNbr" ColumnName="RegistryNbr" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="Type_Valid" ColumnName="Type_Valid" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Branch_Valid" ColumnName="Branch_Valid" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+                <ScalarProperty Name="ResidentIn" ColumnName="ResidentIn" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="CustomerStatus" ColumnName="CustomerStatus" />
+                <ScalarProperty Name="ClosedCustomer" ColumnName="ClosedCustomer" />
+                <ScalarProperty Name="TradingType" ColumnName="TradingType" />
+                <ScalarProperty Name="InvPotential" ColumnName="InvPotential" />
+                <ScalarProperty Name="PotentialStatus" ColumnName="PotentialStatus" />
+                <ScalarProperty Name="PotentialStatusDate" ColumnName="PotentialStatusDate" />
+                <ScalarProperty Name="EUSRequestType" ColumnName="EUSRequestType" />
+                <ScalarProperty Name="EUSSubRequestType" ColumnName="EUSSubRequestType" />
+                <ScalarProperty Name="EUSEmailTo" ColumnName="EUSEmailTo" />
+                <ScalarProperty Name="EUSSubject" ColumnName="EUSSubject" />
+                <ScalarProperty Name="EUSEmailCC" ColumnName="EUSEmailCC" />
+                <ScalarProperty Name="EUSSubAgentName" ColumnName="EUSSubAgentName" />
+                <ScalarProperty Name="EUSLandline" ColumnName="EUSLandline" />
+                <ScalarProperty Name="EUSMobile" ColumnName="EUSMobile" />
+                <ScalarProperty Name="EUSEmail" ColumnName="EUSEmail" />
+                <ScalarProperty Name="EUSWUAccUSD" ColumnName="EUSWUAccUSD" />
+                <ScalarProperty Name="EUSFullName" ColumnName="EUSFullName" />
+                <ScalarProperty Name="EUSOperatorID" ColumnName="EUSOperatorID" />
+                <ScalarProperty Name="EUSTerminal" ColumnName="EUSTerminal" />
+                <ScalarProperty Name="WUPOSOPFullName" ColumnName="WUPOSOPFullName" />
+                <ScalarProperty Name="WUPOSOPOPID" ColumnName="WUPOSOPOPID" />
+                <ScalarProperty Name="WUPOSOPTerminalID" ColumnName="WUPOSOPTerminalID" />
+                <ScalarProperty Name="LimitNeeded" ColumnName="LimitNeeded" />
+                <ScalarProperty Name="LimitReason" ColumnName="LimitReason" />
+                <ScalarProperty Name="CanceledMTCN" ColumnName="CanceledMTCN" />
+                <ScalarProperty Name="ReplacementMTCN" ColumnName="ReplacementMTCN" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="GMPERecID" ColumnName="GMPERecID" />
+                <ScalarProperty Name="GMPEAccountNo" ColumnName="GMPEAccountNo" />
+                <ScalarProperty Name="OpeningDate" ColumnName="OpeningDate" />
+                <ScalarProperty Name="Resident" ColumnName="Resident" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="Employer" ColumnName="Employer" />
+                <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+                <ScalarProperty Name="IDDescription" ColumnName="IDDescription" />
+                <ScalarProperty Name="WorkStatus" ColumnName="WorkStatus" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="NearBy" ColumnName="NearBy" />
+                <ScalarProperty Name="Locality" ColumnName="Locality" />
+                <ScalarProperty Name="CityAccount" ColumnName="CityAccount" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="CountryAccount" ColumnName="CountryAccount" />
+                <ScalarProperty Name="POBox" ColumnName="POBox" />
+                <ScalarProperty Name="TBSFlag" ColumnName="TBSFlag" />
+                <ScalarProperty Name="FoundationDat" ColumnName="FoundationDat" />
+                <ScalarProperty Name="Activities" ColumnName="Activities" />
+                <ScalarProperty Name="LegalForm" ColumnName="LegalForm" />
+                <ScalarProperty Name="EconomicSector" ColumnName="EconomicSector" />
+                <ScalarProperty Name="WUBills" ColumnName="WUBills" />
+                <ScalarProperty Name="WUSuspendDate" ColumnName="WUSuspendDate" />
+                <ScalarProperty Name="WULocationStatus" ColumnName="WULocationStatus" />
+                <ScalarProperty Name="WUTransactionLimit" ColumnName="WUTransactionLimit" />
+                <ScalarProperty Name="WUDailyLimit" ColumnName="WUDailyLimit" />
+                <ScalarProperty Name="WURegion" ColumnName="WURegion" />
+                <ScalarProperty Name="WUAddress" ColumnName="WUAddress" />
+                <ScalarProperty Name="WUContactPhone" ColumnName="WUContactPhone" />
+                <ScalarProperty Name="WUContact" ColumnName="WUContact" />
+                <ScalarProperty Name="WUBusinessID" ColumnName="WUBusinessID" />
+                <ScalarProperty Name="WUAccLBP" ColumnName="WUAccLBP" />
+                <ScalarProperty Name="WUAccUSD" ColumnName="WUAccUSD" />
+                <ScalarProperty Name="WUBobAcctID" ColumnName="WUBobAcctID" />
+                <ScalarProperty Name="WU" ColumnName="WU" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="WUMondayFrom_Valid" ColumnName="WUMondayFrom_Valid" />
+                <ScalarProperty Name="WUMondayFrom" ColumnName="WUMondayFrom" />
+                <ScalarProperty Name="WUMondayTo_Valid" ColumnName="WUMondayTo_Valid" />
+                <ScalarProperty Name="WUMondayTo" ColumnName="WUMondayTo" />
+                <ScalarProperty Name="WUTuesdayFrom_Valid" ColumnName="WUTuesdayFrom_Valid" />
+                <ScalarProperty Name="WUTuesdayFrom" ColumnName="WUTuesdayFrom" />
+                <ScalarProperty Name="WUTuesdayTo_Valid" ColumnName="WUTuesdayTo_Valid" />
+                <ScalarProperty Name="WUTuesdayTo" ColumnName="WUTuesdayTo" />
+                <ScalarProperty Name="WUWednesdayFrom_Valid" ColumnName="WUWednesdayFrom_Valid" />
+                <ScalarProperty Name="WUWednesdayFrom" ColumnName="WUWednesdayFrom" />
+                <ScalarProperty Name="WUWednesdayTo_Valid" ColumnName="WUWednesdayTo_Valid" />
+                <ScalarProperty Name="WUWednesdayTo" ColumnName="WUWednesdayTo" />
+                <ScalarProperty Name="WUThursdayFrom_Valid" ColumnName="WUThursdayFrom_Valid" />
+                <ScalarProperty Name="WUThursdayFrom" ColumnName="WUThursdayFrom" />
+                <ScalarProperty Name="WUThursdayTo_Valid" ColumnName="WUThursdayTo_Valid" />
+                <ScalarProperty Name="WUThursdayTo" ColumnName="WUThursdayTo" />
+                <ScalarProperty Name="WUFridayFrom_Valid" ColumnName="WUFridayFrom_Valid" />
+                <ScalarProperty Name="WUFridayFrom" ColumnName="WUFridayFrom" />
+                <ScalarProperty Name="WUFridayTo_Valid" ColumnName="WUFridayTo_Valid" />
+                <ScalarProperty Name="WUFridayTo" ColumnName="WUFridayTo" />
+                <ScalarProperty Name="WUSaturdayFrom_Valid" ColumnName="WUSaturdayFrom_Valid" />
+                <ScalarProperty Name="WUSaturdayFrom" ColumnName="WUSaturdayFrom" />
+                <ScalarProperty Name="WUSaturdayTo_Valid" ColumnName="WUSaturdayTo_Valid" />
+                <ScalarProperty Name="WUSaturdayTo" ColumnName="WUSaturdayTo" />
+                <ScalarProperty Name="OnlineSegment" ColumnName="OnlineSegment" />
+                <ScalarProperty Name="Shareholder" ColumnName="Shareholder" />
+                <ScalarProperty Name="BOBEmployee" ColumnName="BOBEmployee" />
+                <ScalarProperty Name="BOBVIP" ColumnName="BOBVIP" />
+                <ScalarProperty Name="DSAFlag" ColumnName="DSAFlag" />
+                <ScalarProperty Name="RetailSegment" ColumnName="RetailSegment" />
+                <ScalarProperty Name="OnlineBanking" ColumnName="OnlineBanking" />
+                <ScalarProperty Name="CoporateEBanking" ColumnName="CoporateEBanking" />
+                <ScalarProperty Name="CorpAgentFullName" ColumnName="CorpAgentFullName" />
+                <ScalarProperty Name="CorpAgentPhone1" ColumnName="CorpAgentPhone1" />
+                <ScalarProperty Name="CorpAgentPhone2" ColumnName="CorpAgentPhone2" />
+                <ScalarProperty Name="CorpAgent" ColumnName="CorpAgent" />
+                <ScalarProperty Name="CorpAgentFullName2" ColumnName="CorpAgentFullName2" />
+                <ScalarProperty Name="RecordAlert_Valid" ColumnName="RecordAlert_Valid" />
+                <ScalarProperty Name="RecordAlert" ColumnName="RecordAlert" />
+                <ScalarProperty Name="HasRecordAlert" ColumnName="HasRecordAlert" />
+                <ScalarProperty Name="LastViewed" ColumnName="LastViewed" />
+                <ScalarProperty Name="RecordAlertLastAcknowledgedOn" ColumnName="RecordAlertLastAcknowledgedOn" />
+                <ScalarProperty Name="RecordAlertLastAcknowledgedBy" ColumnName="RecordAlertLastAcknowledgedBy" />
+                <ScalarProperty Name="RecordAlertAcknowledgedFlag" ColumnName="RecordAlertAcknowledgedFlag" />
+                <ScalarProperty Name="AccountBalanceURL" ColumnName="AccountBalanceURL" />
+                <ScalarProperty Name="Ufullname" ColumnName="Ufullname" />
+                <ScalarProperty Name="FormationPlace" ColumnName="FormationPlace" />
+                <ScalarProperty Name="CorporateContact" ColumnName="CorporateContact" />
+                <ScalarProperty Name="ClientClassification" ColumnName="ClientClassification" />
+                <ScalarProperty Name="WUSundayTo_Valid" ColumnName="WUSundayTo_Valid" />
+                <ScalarProperty Name="WUSundayTo" ColumnName="WUSundayTo" />
+                <ScalarProperty Name="WUSundayFrom_Valid" ColumnName="WUSundayFrom_Valid" />
+                <ScalarProperty Name="WUSundayFrom" ColumnName="WUSundayFrom" />
+                <ScalarProperty Name="StatusDate" ColumnName="StatusDate" />
+                <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+                <ScalarProperty Name="AccountBalanceTab" ColumnName="AccountBalanceTab" />
+                <ScalarProperty Name="KBLastSearched" ColumnName="KBLastSearched" />
+                <ScalarProperty Name="PPNumber" ColumnName="PPNumber" />
+                <ScalarProperty Name="AccountIDTerritoryCode" ColumnName="AccountIDTerritoryCode" />
+                <ScalarProperty Name="RMSegment" ColumnName="RMSegment" />
+                <ScalarProperty Name="RMUserName" ColumnName="RMUserName" />
+                <ScalarProperty Name="TerritoryCode" ColumnName="TerritoryCode" />
+                <ScalarProperty Name="VerbalPassword" ColumnName="VerbalPassword" />
+                <ScalarProperty Name="PhoneFormatLandline" ColumnName="PhoneFormatLandline" />
+                <ScalarProperty Name="PhoneFormatMobile" ColumnName="PhoneFormatMobile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

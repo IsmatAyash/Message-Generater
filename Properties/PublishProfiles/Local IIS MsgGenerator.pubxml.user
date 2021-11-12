@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\MsgGenerator</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>12/10/2015 14:54:21</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>12/10/2015 14:54:21</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/20/2015 16:36:57</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/20/2015 16:36:57</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="bin/MsgGenerator.dll">
+      <publishTime>12/10/2015 14:42:11</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>05/20/2015 16:24:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>05/20/2015 16:24:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>05/20/2015 16:24:29</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>05/21/2015 13:54:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>05/20/2015 16:24:20</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>05/21/2015 11:29:22</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/20/2015 16:24:16</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/20/2015 16:24:20</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/20/2015 16:24:20</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/20/2015 16:24:20</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/20/2015 16:24:19</publishTime>
+    </File>
+    <File Include="Models/CardsDataModel.edmx.diagram">
+      <publishTime>05/26/2015 15:44:42</publishTime>
+    </File>
+    <File Include="Models/HeatDataModel.edmx.diagram">
+      <publishTime>05/20/2015 16:46:00</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/27/2015 10:04:25</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>12/10/2015 14:54:20</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>05/20/2015 16:24:19</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>05/20/2015 16:24:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>05/20/2015 16:24:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>05/20/2015 16:24:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>05/20/2015 16:24:20</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>05/20/2015 16:24:28</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>05/20/2015 16:24:29</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>05/20/2015 16:24:29</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>05/27/2015 13:59:39</publishTime>
+    </File>
+    <File Include="Views/CardMessage/Create.cshtml">
+      <publishTime>05/21/2015 15:24:17</publishTime>
+    </File>
+    <File Include="Views/CardMessage/Delete.cshtml">
+      <publishTime>05/20/2015 16:49:11</publishTime>
+    </File>
+    <File Include="Views/CardMessage/Edit.cshtml">
+      <publishTime>05/21/2015 15:23:08</publishTime>
+    </File>
+    <File Include="Views/CardMessage/Index.cshtml">
+      <publishTime>05/21/2015 13:21:43</publishTime>
+    </File>
+    <File Include="Views/GetData/About.cshtml">
+      <publishTime>05/20/2015 16:24:16</publishTime>
+    </File>
+    <File Include="Views/GetData/Contact.cshtml">
+      <publishTime>05/20/2015 16:24:16</publishTime>
+    </File>
+    <File Include="Views/GetData/Index.cshtml">
+      <publishTime>05/22/2015 14:05:57</publishTime>
+    </File>
+    <File Include="Views/ImportExportData/Index.cshtml">
+      <publishTime>05/27/2015 17:50:00</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>05/20/2015 16:24:29</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>05/27/2015 08:14:34</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/20/2015 16:24:16</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>05/20/2015 16:24:16</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/10/2015 14:41:35</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

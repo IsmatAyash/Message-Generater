@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MsgGenerator.Models.CardMessage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Card Messages</h3>
+
+<p>
+    @using (@Html.BeginForm("Index", "CardMessage", FormMethod.Get))
+    {
+        <b>Filter By :</b>
+        @Html.RadioButton("filterBy", "Activation", true, new { onchange = "this.form.submit();" }) <text>Activation</text>
+        @Html.RadioButton("filterBy", "Issuance", new { onchange = "this.form.submit();" }) <text>Issuance</text>
+        @Html.RadioButton("filterBy", "Renewal", new { onchange = "this.form.submit();" }) <text>Renewal</text>
+        @Html.RadioButton("filterBy", "Fraud", new { onchange = "this.form.submit();" }) <text>Fraud</text>
+        <br />
+    }
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table-condensed" style="font-family:Calibri;font-size:small" border="1">
+    <tr style="background-color:lightgrey">
+        <th>
+            @Html.DisplayNameFor(model => model.MsgSubject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MsgText)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MsgSubject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MsgText)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<MsgGenerator.Models.MsgRecipient>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>Import Export Data @TempData["Message"]</h4>
+<p>
+    @using (@Html.BeginForm("Index", "ImportExportData", FormMethod.Get))
+    {
+        <div class="form-inline">
+            <button name="button" type="button" class="btn btn-danger" onclick="document.location.href=$('#importUrl').attr('href')">Import Card Data</button>
+            <a id="importUrl" href="@Html.AttributeEncode(Url.Action("ImportData", "ImportExportData" ))" style="display:none;"></a>
+            @Html.DropDownList("FilterBY", @ViewBag.MsgSubject as SelectList, "All", new { @class = "form-control" })
+            <input type="submit" class="btn btn-default" value="Filter By" />
+        </div>
+    }
+</p>
+
+@using (@Html.BeginForm("ExportToExcel", "ImportExportData", FormMethod.Get))
+{ 
+    <table style="font-family:Calibri;font-size:small;background-color:lightblue">
+        <tr>
+            <th>
+                <label class="control-label">Export What : </label>
+                @Html.RadioButton("ExportWhat", "CardMsgs", true) All Card Messages
+                @Html.RadioButton("ExportWhat", "Activation") Activation
+                @Html.RadioButton("ExportWhat", "Issuance") Issuance
+                @Html.RadioButton("ExportWhat", "Renewal") Renewal
+                @Html.RadioButton("ExportWhat","Fraud") Fraud
+                @Html.RadioButton("ExportWhat","LatePayments") Late Payments
+                <br />
+                <label class="control-label">Export To&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </label>
+                @Html.RadioButton("ExportTo", "csv", true) CSV
+                @Html.RadioButton("ExportTo", "Excel") Excel
+            </th>
+            <th></th>
+            <th>
+                <input type="submit" value="Export Data" class="btn btn-success" />
+            </th>
+            <th class="col-md-1"></th>
+            <th>
+                <b>@ViewBag.RecordCount @ViewBag.LastImported</b>
+            </th>
+        </tr>
+    </table>
+}
+
+<table class="table-condensed" style="font-family:Calibri;font-size:small" border="1">
+    <tr style ="background-color:lightgrey">
+        <th>
+            @Html.DisplayNameFor(model => model.MsgSubject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MsgText)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MsgSubject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MsgText)
+            </td>
+        </tr>
+    }
+
+</table>
